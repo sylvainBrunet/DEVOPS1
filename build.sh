@@ -1,6 +1,7 @@
 #!/bin/bash
 
 INSTANCE_RUNNING=`sudo docker ps --filter="ancestor=sylvain/devops" | wc -l`
+    docker rm prod-devops
 
 # Build docker image
 docker build -t sylvain/devops .
